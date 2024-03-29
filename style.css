@@ -1,3 +1,9 @@
+html {
+    font-size: 16px; 
+  font-family: Arial, sans-serif; 
+  line-height: 1.6;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -8,53 +14,109 @@
 .right-side {
     grid-column: 2 / 3;
     display: grid;
-    grid-template-rows: 1.5fr 1.5fr 7fr;
+    grid-template-rows: 1fr 10fr;
     gap: 5px;
 }
 
 .sidebar {
     grid-column: 1 / 2;
     display: grid;
-    grid-template-rows: 1fr 4fr 4fr;
+    grid-template-rows: 0.5fr 2fr 2fr 5fr;
     background-color: lightblue;
+}
+
+.nav {
+    
 }
 
 .sidebar ul>li {
     list-style-type: none;
 }
 
+.nav-icon {
+    width: 12%;
+}
+
 .header-container {
     grid-column: 1 / 3;
+    grid-row: 1 / 2;
     background-color: grey; /* temporary */
     display: grid;
     grid-template-rows: 1fr 1fr;
 }
 
-.header.search {
+.header.top {
     grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
 
-.header.intro {
+#left-header-top, #right-header-top {
+    display: flex;
+}
+
+#left-header-top {
+    justify-content: flex-start;
+    padding-top: 10px;
+    padding-left: 25px;
+}
+
+#left-header-top > .header-icon {
+    width: 5%;
+}
+
+#right-header-top {
+
+}
+
+#right-header-top > .header-icon {
+    width: 20%;
+}
+
+
+
+.header.bottom {
     grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+#left-header-bottom {
+    display: flex;
+}
+
+#right-header-bottom {
+    display: flex;
+}
+
+.avatar-icon {
+    border-radius: 50%;
+}
+
+#mini {
+    width: 20%;
+}
+
+#big {
+    width: 20%;
 }
 
 .main {
-    grid-area: 2 / 1 / 4 / 3;
+    grid-area: 2 / 1 / 3 / 3;
     /* grid-column: 1 / 3;
     grid-row: 2 / 4; */
     display: grid;
-    grid-template-rows: 1fr 10fr;
     grid-template-columns: 2fr 1fr;
     gap: 10px;
     padding: 5px;
 }
 
+
 #project-title {
     grid-area: 1 / 1 / 2 / 3;
 }
 
-.projects {
-    
+.project-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
@@ -63,19 +125,42 @@
 .card {
     background-color: lightcoral;
     display: grid;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
 }
 
-.card-icons {
-    justify-self: end;
+.card-icon-container {
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.card-icon {
+    width: 10%;
 }
 
 .side-content {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr 4fr;
+}
+
+.side-header {
+    
 }
 
 .side-card {
     background-color: lightseagreen;
 }
 
+#site-logo {
+    display: flex;
+    align-items: center;
+    font-size: 2.5em;
+    max-height: 50px;
+}
+
+#main-icon {
+    height: 75%;
+    width: 75%;
+}
