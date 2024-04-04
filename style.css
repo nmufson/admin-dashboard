@@ -14,7 +14,7 @@ html {
 .right-side {
     grid-column: 2 / 3;
     display: grid;
-    grid-template-rows: 1fr 9fr;
+    grid-template-rows: 1fr 1000px;
     
 }
 
